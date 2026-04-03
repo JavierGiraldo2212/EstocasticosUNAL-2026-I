@@ -3,7 +3,7 @@ skinparam activityShape octagon
 title Flujo de Ejecución: manet_jerarquica.cc
 
 start
-:Parsear Argumentos de CLI\n(--velocityL2);
+:Parsear Argumentos de CLI\n(--velocityL2, --protocol);
 :Instanciar NodeContainers\n(L1: A, B, C | L2: X, Y);
 :Configurar Capa PHY y MAC\n(YansWifi / AdHocWifiMac);
 fork
@@ -11,11 +11,16 @@ fork
 fork again
     :Movilidad Nivel 2\n(GaussMarkov);
 end merge
-:Instalar Pila de Red IPv4\ny Enrutamiento AODV;
+if (protocol == "AODV") then (Sí)
+  :Instalar Enrutamiento\nReactivo (AODV);
+else (No, es OLSR)
+  :Instalar Enrutamiento\nProactivo (OLSR);
+endif
+:Instalar Pila de Red IPv4;
 :Configurar Aplicaciones\n(UdpEchoServer en L1_C, UdpEchoClient en L1_A);
 :Instalar FlowMonitorHelper;
 :Simulator::Run (100 s);
-:Generar manet-metrics.xml;
+:Generar metrics_[protocol].xml;
 :Simulator::Destroy();
 stop
 @enduml

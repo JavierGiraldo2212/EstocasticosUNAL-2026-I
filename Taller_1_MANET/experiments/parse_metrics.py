@@ -51,15 +51,20 @@ def analyze_xml(xml_file, label):
     print()
 
 if __name__ == "__main__":
-    # Usamos la ruta absoluta para no fallar sin importar desde dónde lo ejecutes
     base = "/home/javier-giraldo/ns-allinone-3.43/ns-3.43/"
 
-    # Usamos los nombres exactos con los que renombramos los archivos XML
     scenarios = [
-        (f"{base}metrics_escenario_1.xml", "Escenario 1 — Control   (2  m/s)"),
-        (f"{base}metrics_escenario_2.xml", "Escenario 2 — Moderado  (15 m/s)"),
-        (f"{base}metrics_escenario_3.xml", "Escenario 3 — Estrés    (30 m/s)"),
+        # Resultados para AODV
+        (f"{base}metrics_AODV_2.xml",  "AODV - Escenario 1 (Control: 2 m/s)"),
+        (f"{base}metrics_AODV_15.xml", "AODV - Escenario 2 (Moderado: 15 m/s)"),
+        (f"{base}metrics_AODV_30.xml", "AODV - Escenario 3 (Estrés: 30 m/s)"),
+        
+        # Resultados para OLSR
+        (f"{base}metrics_OLSR_2.xml",  "OLSR - Escenario 1 (Control: 2 m/s)"),
+        (f"{base}metrics_OLSR_15.xml", "OLSR - Escenario 2 (Moderado: 15 m/s)"),
+        (f"{base}metrics_OLSR_30.xml", "OLSR - Escenario 3 (Estrés: 30 m/s)"),
     ]
 
+    print("\nIniciando análisis comparativo: AODV vs OLSR...\n")
     for xml_path, label in scenarios:
         analyze_xml(xml_path, label)

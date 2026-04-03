@@ -19,10 +19,21 @@ En el diseño y simulación de redes MANET, la movilidad es la principal fuente 
 La validación de estas arquitecturas requiere herramientas especializadas de simulación de eventos discretos. 
 * **Simulador NS-3:** Entorno modular estándar en la industria e investigación que permite modelar con alta fidelidad las capas físicas y MAC, así como diversos protocolos de red.
 * **Módulo ns3-ai:** Extensión que reemplaza a arquitecturas previas (como AI Gym) y facilita la integración del simulador con frameworks de Inteligencia Artificial (basados en Python), permitiendo la extracción de datos de telemetría y control de red en tiempo real.
-* **Metodología de Experimentación:** Siguiendo los lineamientos operativos para tareas automatizadas, la evaluación de estos modelos requiere la definición de un marco teórico riguroso [cite: 66] y la ejecución y documentación de al menos tres (3) escenarios de prueba para contrastar el comportamiento del sistema[cite: 71].
+* **Metodología de Experimentación:** Siguiendo los lineamientos operativos para tareas automatizadas, la evaluación de estos modelos requiere la definición de un marco teórico riguroso y la ejecución y documentación de al menos tres (3) escenarios de prueba para contrastar el comportamiento del sistema.
 
-## 5. Referencias Bibliográficas
-[1] J. E. Ortiz Triviño, "Lineamientos Operativos: Modelos Estocásticos y Simulación en Computación y Comunicaciones," Universidad Nacional de Colombia, Bogotá, 2026[cite: 3, 10].  
+## 5. Protocolos de Enrutamiento: Paradigmas Reactivo vs Proactivo
+El enrutamiento en MANET se clasifica principalmente en dos enfoques, los cuales reaccionan distinto frente a la estocasticidad de la movilidad:
+* **Protocolos Reactivos (ej. AODV):** Descubren rutas "bajo demanda" mediante inundación de mensajes de búsqueda. Tienen menor *overhead* en redes estáticas, pero introducen alta latencia durante el descubrimiento de la ruta.
+* **Protocolos Proactivos (ej. OLSR):** Mantienen tablas de enrutamiento actualizadas continuamente intercambiando información de estado de enlace (ej. mensajes *Hello* e información de topología mediante nodos MPR). Ofrecen latencia casi nula, pero sufren de un alto *overhead* de control y posibles rutas caducadas si la movilidad es extrema.
+
+## 6. Modelos de Movilidad y Simulación
+En el diseño y simulación, la movilidad dicta el desempeño del enrutamiento.
+* **Movilidad de Nodo:** Desplazamiento local de dispositivos (ej. `RandomWalk2dMobilityModel`).
+* **Movilidad de Clúster:** Movimiento direccional coordinado de una subred (ej. `GaussMarkovMobilityModel`).
+* **Herramientas (NS-3):** Entorno modular que permite modelar con alta fidelidad las capas físicas (802.11) y evaluar el desempeño mediante múltiples escenarios de prueba obligatorios.
+
+## Referencias Bibliográficas
+[1] J. E. Ortiz Triviño, "Lineamientos Operativos: Modelos Estocásticos y Simulación en Computación y Comunicaciones," Universidad Nacional de Colombia, Bogotá, 2026.  
 [2] H. Zárate Ceballos *et al.*, *Wireless Network Simulation: A Guide using Ad Hoc Networks and the ns-3 Simulator*. Apress, 2021.  
 [3] Proyecto NS-3, "Mixed Wired Wireless Example," *ns-3.27 Doxygen*. [En línea]. Disponible: https://www.nsnam.org/  
 [4] Laboratorio Dian (HUST), "NS-3 AI Integration Module (ns3-ai)," *GitHub*. [En línea]. Disponible: https://github.com/hust-diangroup/ns3-ai
