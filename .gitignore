@@ -1,0 +1,11 @@
+# binarios - temporales
+build/
+*.so
+*.o
+*.pc
+__pycache__/
+
+# archivos de salida de simulación (pesados)
+*.pcap
+*.tr
+*.anim

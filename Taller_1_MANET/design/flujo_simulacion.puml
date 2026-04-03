@@ -1,0 +1,21 @@
+@startuml
+skinparam activityShape octagon
+title Flujo de Ejecución: manet_jerarquica.cc
+
+start
+:Parsear Argumentos de CLI\n(--velocityL2);
+:Instanciar NodeContainers\n(L1: A, B, C | L2: X, Y);
+:Configurar Capa PHY y MAC\n(YansWifi / AdHocWifiMac);
+fork
+    :Movilidad Nivel 1\n(RandomWalk2d);
+fork again
+    :Movilidad Nivel 2\n(GaussMarkov);
+end merge
+:Instalar Pila de Red IPv4\ny Enrutamiento AODV;
+:Configurar Aplicaciones\n(UdpEchoServer en L1_C, UdpEchoClient en L1_A);
+:Instalar FlowMonitorHelper;
+:Simulator::Run (100 s);
+:Generar manet-metrics.xml;
+:Simulator::Destroy();
+stop
+@enduml

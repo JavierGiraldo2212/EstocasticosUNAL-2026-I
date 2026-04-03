@@ -1,0 +1,34 @@
+@startuml
+skinparam handwritten false
+skinparam componentStyle rectangle
+skinparam shadowing false
+
+title Arquitectura MANET Jerárquica
+
+package "Nivel 2 (Backbone / Enrutamiento Troncal)" {
+    component [Clúster L2_X\n(3 Nodos)] as CX #LightBlue
+    component [Clúster L2_Y\n(3 Nodos)] as CY #LightBlue
+    CX <~left~> CY : Enlace Móvil\n(AODV)
+}
+
+package "Nivel 1 (Nodos Hoja / Tráfico Final)" {
+    component [Clúster L1_A\n(5 Nodos)] as CA #LightGreen
+    component [Clúster L1_B\n(5 Nodos)] as CB #LightGreen
+    component [Clúster L1_C\n(5 Nodos)] as CC #LightGreen
+}
+
+' Relaciones de enrutamiento
+CA <..> CX : Cobertura Ad Hoc
+CB <..> CX : Cobertura Ad Hoc
+CC <..> CY : Cobertura Ad Hoc
+
+note bottom of CX
+  Movilidad: GaussMarkov
+  Velocidad: Variable (Escenarios)
+end note
+
+note bottom of CA
+  Movilidad: RandomWalk2d
+  Velocidad: 1.0 m/s
+end note
+@enduml
