@@ -1,0 +1,7 @@
+label,n_flows,total_tx,total_rx,total_lost,pdr,plr,throughput,delay_ms,jitter_ms
+"Escenario 1
+Control (2 m/s)",9,1037,129,844,12.44,44.87,9.727,11.7805,3.1919
+"Escenario 2
+Moderado (15 m/s)",19,1050,137,849,13.05,44.71,8.545,178.0201,74.5317
+"Escenario 3
+Estrés (30 m/s)",48,1330,522,803,39.25,37.65,34.094,29.7419,7.6202

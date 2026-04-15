@@ -50,7 +50,7 @@ Navegue al directorio de NS-3 y ejecute:
 ```
 
 **3. Análisis de Resultados:**
-Los datos se exportan a `manet-metrics.xml`. Para procesarlos, utilice el script de extracción:
+Los datos se exportan a `manet-metrics.xml`. Para procesarlos, utilizar el script de extracción:
 ```bash
 python experiments/parse_metrics.py
 ```
