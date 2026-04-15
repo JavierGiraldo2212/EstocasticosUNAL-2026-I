@@ -21,5 +21,37 @@ El repositorio está estructurado de acuerdo con las actividades evaluativas del
 * **Lenguajes:** C++ (Core), Python 3.11 (Análisis y ns3-ai).
 * **Dependencias Extra:** `ns3-ai`, `FlowMonitor`, Entorno virtual Conda.
 
+##  Estructura del proyecto
+EstocasticosUNAL-2026-I/
+├── .vscode/
+│   └── c_cpp_properties.json
+├── Taller_1_MANET/
+│   ├── design/
+│   │   ├── flujo_simulacion.png
+│   │   ├── flujo_simulacion.puml
+│   │   ├── topologia.png
+│   │   └── topologia.puml
+│   ├── docs/
+│   │   ├── 01_Marco_Teorico.md
+│   │   ├── 02_Descripcion_Justificacion.md
+│   │   ├── 03_Diseno_Solucion.md
+│   │   ├── 04_Manual_Tecnico.md
+│   │   ├── 05_Manual_Usuario.md
+│   │   └── 06_Experimentacion_Resultados.md
+│   ├── experiments/
+│   │   ├── fig1_panel_barras.png
+│   │   ├── fig2_lineas_velocidad.png
+│   │   ├── fig3_radar.png
+│   │   ├── manet_reporte.pdf
+│   │   ├── manet_resultados.csv
+│   │   └── parse_metrics.py
+│   ├── src/
+│   │   └── manet_jerarquica.cc
+│   └── README.md
+├── .gitignore
+├── metrics_escenario_1.xml
+├── metrics_escenario_2.xml
+├── metrics_escenario_3.xml
+└── README.md
 ---
 *Para instrucciones específicas de compilación y ejecución, por favor consulte el `README.md` individual dentro de la carpeta de cada trabajo.*
