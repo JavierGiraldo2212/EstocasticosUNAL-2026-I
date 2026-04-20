@@ -8,7 +8,7 @@ title Arquitectura MANET Jerárquica
 package "Nivel 2 (Backbone / Enrutamiento Troncal)" {
     component [Clúster L2_X\n(3 Nodos)] as CX #LightBlue
     component [Clúster L2_Y\n(3 Nodos)] as CY #LightBlue
-    CX <~left~> CY : Enlace Móvil\n(AODV)
+    CX <~left~> CY : Enlace Móvil\n(AODV / OLSR)
 }
 
 package "Nivel 1 (Nodos Hoja / Tráfico Final)" {
