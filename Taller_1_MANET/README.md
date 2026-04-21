@@ -34,7 +34,7 @@ Taller_1_MANET/
 * **docs**: Contiene toda la documentación obligatoria en formato Markdown, estructurada secuencialmente desde la conceptualización teórica hasta la validación empírica y extracción de resultados comparativos.
 * **design**: Diagramas en formato PlantUML que especifican gráficamente la topología de la red y la inyección condicional de la pila de red.
 * **src**: Código fuente modular implementado en C++ para NS-3.43. Permite la selección dinámica de la velocidad y del protocolo de enrutamiento (AODV u OLSR) vía línea de comandos.
-* **experiments**: Script en Python para leer y analizar simultáneamente los archivos XML generados por FlowMonitor, consolidando las métricas de rendimiento de la comparativa.
+* **experiments**: Scripts en Python para la automatización del análisis. Incluye `ai_controller.py` para la optimización de parámetros de red mediante inteligencia artificial (ns3-ai), y `parse_metrics.py` para leer y analizar simultáneamente los archivos XML generados por FlowMonitor, consolidando las métricas de rendimiento de la comparativa.
 
 ## Instrucciones de Ejecución
 Este proyecto está diseñado para compilarse dentro del entorno de NS-3. Se recomienda crear un enlace simbólico desde el directorio `scratch` de NS-3 hacia la carpeta `src` de este directorio.
