@@ -4,6 +4,12 @@
 **Profesor:** Jorge Eduardo Ortiz Triviño  
 **Autores:** 
 - Javier Santiago Giraldo Jiménez  
+- Tomas Felipe Garzon Gomez.
+- David Felipe Chaparro Pérez
+- Adrian yebid Rincon
+- Pablo Felipe Sandoval Menjura
+- Camilo Borja Rojas
+- Tomas Sebastián Vallejo Fonseca
 
 ##  Descripción del Repositorio
 Este repositorio contiene el código fuente, la documentación técnica y los resultados de experimentación de los trabajos prácticos desarrollados para la asignatura "Modelos Estocásticos y Simulación en Computación y Comunicaciones". El enfoque principal es el uso del simulador de eventos discretos **NS-3** (versión 3.43) y la integración de herramientas de inteligencia artificial mediante **ns3-ai**.
